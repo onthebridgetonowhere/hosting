@@ -11,18 +11,23 @@ Find instructions on how to run Plausible Analytics Self Hosted [in our docs](ht
 We are always looking to expand on the options and setups provided here. Feel free to open an issue or PR if you feel
 something could be improved.
 
+## How to install
+
+Clone this repository
+
+`git clone https://github.com/onthebridgetonowhere/hosting.git`
 
 ### Installation via script
 
 **ARM64**
-`./install-arm64.sh` 
+
+`./install-arm64.sh` - it installs plausible analytics at commit 3242327d (Sept 2021) with clickhouse 22.3.3-alpine version. The newer versions of Plausible do not start properly, thus I use an old version. Hopefully it will be fixed soon. 
 
 **X64**
+
 `./install-x64.sh` - installs the latest plausible analytics with clickhouse 22.3.3-alpine version. It simply calls the docker-compose file.
 
 ### Manual Installation for ARM64 only
-
-Clone this repository and then run the following commands:
 
 **Plausible Analytics**
 
@@ -55,6 +60,8 @@ To stop the containers, run `docker-compose down`.
 
 To update Plausible (as per the docs) run: 
 
-```docker-compose down --remove-orphans
+```
+docker-compose down --remove-orphans
 docker-compose pull plausible
-docker-compose up -d```
+docker-compose up -d
+```
