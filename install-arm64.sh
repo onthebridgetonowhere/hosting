@@ -16,4 +16,3 @@ cd docker-smtp/stretch && docker build -t bytemark/smtp .
 
 cd ../..
 
-docker-compose up -d
